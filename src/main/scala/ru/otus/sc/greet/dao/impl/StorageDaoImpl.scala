@@ -8,4 +8,10 @@ class StorageDaoImpl extends StorageDao {
     "two"   -> "resultTwo",
     "three" -> "resultThree"
   )
+  override lazy val hugeComputation: Int = longComputation
+
+  def longComputation: Int = {
+    Thread.sleep(10000)
+    10
+  }
 }

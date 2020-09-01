@@ -5,4 +5,6 @@ import ru.otus.sc.greet.service.StorageService
 
 class StorageServiceImpl(dao: StorageDao) extends StorageService {
   def getValueFromStorage(key: String) = dao.storage(key)
+
+  override def getValueFromHugeComputation: Int = dao.hugeComputation
 }
